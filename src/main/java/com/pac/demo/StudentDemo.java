@@ -15,7 +15,7 @@ public class StudentDemo {
 
         try {
             System.out.println("Create student");
-            Student tempStudent = new Student("Nia","Gara","Ngaasd");
+            Student tempStudent = new Student("Kess","Eyyu","ASDsda");
 
             session.beginTransaction();
 
