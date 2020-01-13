@@ -22,10 +22,15 @@ public class StudentDemo2 {
 
             displayStudents(theStudents);
 
-            theStudents = session.createQuery("from Student s where s.lastName='Gara'").list();
+            theStudents = session.createQuery("from Student s where s.lastName='Gara' OR s.firstName='Kess'").list();
 
-            System.out.println("\n\nStudents who have surname Gara");
+            System.out.println("\n\nStudents who have surname Gara or name Kess");
             displayStudents(theStudents);
+
+            theStudents = session.createQuery("from Student s where"+" s.email LIKE 'Nate@mail.sk'").list();
+            System.out.println("\n\nStudents who have email 'Nate@mail.sk'");
+            displayStudents(theStudents);
+
 
             session.getTransaction().commit();
             System.out.println("Done");
